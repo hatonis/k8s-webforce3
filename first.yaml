@@ -21,7 +21,6 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: nginx
     spec:
@@ -30,8 +29,8 @@ spec:
         imagePullPolicy: Always
         name: nginx
         ports:
-        - containerPort: 80
-          protocol: TCP
+          - containerPort: 80
+            protocol: TCP
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
@@ -40,5 +39,4 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-
-
+status: {}
